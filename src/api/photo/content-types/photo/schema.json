@@ -4,7 +4,8 @@
   "info": {
     "singularName": "photo",
     "pluralName": "photos",
-    "displayName": "photo"
+    "displayName": "photo",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,12 +13,13 @@
   "pluginOptions": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "videos"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "titre": {
       "type": "string"
@@ -27,6 +29,12 @@
       "relation": "oneToMany",
       "target": "api::comment.comment",
       "mappedBy": "photo"
+    },
+    "categorie": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categorie.categorie",
+      "inversedBy": "photos"
     }
   }
 }

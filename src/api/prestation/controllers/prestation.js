@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- *  tarif controller
+ *  prestation controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::tarif.tarif');
+module.exports = createCoreController('api::prestation.prestation');
